@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='jpg/fevicon.png') }}" type="">
+
+  <title> 3D-Printing-HUB </title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.scss') }}">
+  <!-- responsive style -->
+  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <meta http-equiv="Content-Security-Policy" content="font-src 'self' https://fonts.gstatic.com;">
+
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <!-- <div class="header_top">
+        <div class="container-fluid ">
+          <div class="contact_nav">
+            <a href="">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Call : +01 123455678990
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : demo@gmail.com
+              </span>
+            </a>
+            <a href="">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <span>
+                Location
+              </span>
+            </a>
+          </div>
+        </div>
+      </div> -->
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+              <img src="{{ url_for('static', filename='jpg/logo.png') }}" id="logo" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                  <li class="nav-item mega-dropdown">
+                      <a class="nav-link">SERVICES</a>
+                      <div class="mega-dropdown-content">
+                          <div class="row">
+                              <div class="col-md-3">
+                                  <h3>3D PRINTING SERVICES</h3>
+                                  <a href="#">Plastic 3D Printing Services (FDM/FFF)</a>
+                                  <a href="#">Resin 3D Printing Services (SLA)</a>
+                                  <a href="#">Architectural 3D Printing</a>
+                                  <a href="#">PCB Enclosure 3D Printing</a>
+                                  <a href="#">Robotics Part 3D Printing</a>
+                                  <a href="#">Machine Spare Parts 3D Printing</a>
+                                  <a href="#">Prosthetic 3D Printing</a>
+                                  <a href="#">Jig and Fixture 3D Printing</a>
+                                  <a href="#">Custom 3D Printed Parts</a>
+                              </div>
+                              <div class="col-md-3">
+                                  <h3>DESIGN SERVICES</h3>
+                                  <a href="#">3D Concept Design</a>
+                                  <a href="#">3D Modeling</a>
+                                  <a href="#">3D CAD Design</a>
+                                  <a href="#">2D Engineering Drawing</a>
+                                  <a href="#">Product Design</a>
+                                  <a href="#">Industrial Design</a>
+                                  <a href="#">Product Rendering</a>
+                                  <a href="#">Design Simulation</a>
+                                  <a href="#">3D Scanning</a>
+                                  <a href="#">Reverse Engineering</a>
+                              </div>
+                              <div class="col-md-3">
+                                  <h3>MANUFACTURING SERVICES</h3>
+                                  <a href="#">Product Prototyping</a>
+                                  <a href="#">Low Volume Production</a>
+                                  <a href="#">Rapid Prototyping</a>
+                                  <a href="#">Silicone Molding</a>
+                                  <a href="#">Laser Cutting</a>
+                                  <a href="#">EDM Machining</a>
+                                  <a href="#">CNC Machining</a>
+                                  <a href="#">Product MVP</a>
+                              </div>
+                              <div class="col-md-3">
+                                  <h3>TRAINING</h3>
+                                  <a href="#">3D Printing Training</a>
+                                  <a href="#">3D Design Training</a>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="">HOW IT WORKS</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> CASE STUDY</a>
+                </li>
+                <li class="nav-item">
+                </li>
+                <li class="nav-item mega-dropdown-info">
+                  <a class="nav-link"> INFO</a>
+                  <div class="mega-dropdown-content">
+                      <div class="row">
+                          <div class="col-md-3">
+                            <a href="#">About Us</a>
+                            <a href="#">Design Guide</a>
+                            <a href="#">Material Data Sheets</a>
+                            <a href="#">Pricing Information</a>
+                            <a href="#">Quality Assurance</a>
+                            <a href="#">Tolerance & Accuracy</a>
+                            <a href="#">Gallery</a>
+                            <a href="#">FAQ</a>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('contact') }}">CONTACT</a>
+                </li>
+                <form class="form-inline">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- drop down section -->
+
+    
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="slider_bg_box">
+        <img src="{{ url_for('static', filename='jpg/bg.jpg') }}" alt="">
+      </div>
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 ">
+                  <div class="detail-box">
+                    <h1>
+                      Ignite Innovation <br>
+                      with 3D Printing
+                    </h1>
+
+                    <div class="line">
+                        <h2>
+                          <div class="Welcome">
+                            Welcome to <span class="Three_D">3D Printing HUB!</span>
+                          </div>
+                        </h2>
+                        <p>
+                          3D print your future in minutes. <br>
+                          Revolutionize manufacturing with us!
+                        </p>
+                    </div>
+                    <!-- <div class="btn-box">
+                      <a href="" class="btn1">
+                        Get A Quote
+                      </a>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 ">
+                  <div class="detail-box">
+                    <h1>
+                      Ignite Innovation <br>
+                      with 3D Printing
+                    </h1>
+                    <h2>
+                      <div class="Welcome">
+                        Welcome to <span class="Three_D">3D Printing HUB!</span>
+                      </div>
+                    </h2>
+                    <p>
+                      3D print your future in minutes. <br>
+                      Revolutionize manufacturing with us!
+                    </p>
+                    <!-- <div class="btn-box">
+                      <a href="" class="btn1">
+                        Get A Quote
+                      </a>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7 ">
+                  <div class="detail-box">
+                    <h1>
+                      Ignite Innovation <br>
+                      with 3D Printing
+                    </h1>
+                    <h2>
+                      <div class="Welcome">
+                        Welcome to <span class="Three_D">3D Printing HUB!</span>
+                      </div>
+                    </h2>
+                    <p>
+                      3D print your future in minutes. <br>
+                      Revolutionize manufacturing with us!
+                    </p>
+                    <!-- <div class="btn-box">
+                      <a href="" class="btn1">
+                        Get A Quote
+                      </a>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#customCarousel1" data-slide-to="1"></li>
+          <li data-target="#customCarousel1" data-slide-to="2"></li>
+        </ol>
+
+      </div>
+
+    </section>
+    <!-- end slider section -->
+    <div class="black-box">
+
+    </div>
+  </div>
+
+
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <h5 style="text-align: center; font-weight: bold; font-size: larger;">
+      Your partner in Additive Manufacturing production, catering to everything from individual <br>
+      pieces and prototypes to extensive production runs of fully functional parts.
+    </h5>
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container">
+
+          
+        </div>
+        <br><br>
+        <div class="row">
+          <div class="col-md-6 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='jpg/s1.jpg') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  For Prototyping & Sampling
+                </h5>
+                <p>
+                  • No set minimum order quantity<br>
+                  • Prototypes align with production standards<br>
+                  • Diverse materials and finishes available<br>
+                  • Receive parts within 2 days<br>
+                  • Instant and automated quoting process
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{{ url_for('static', filename='jpg/s2.jpg') }}" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  For Manufacturing
+                </h5>
+                <p>
+                  • Industrial materials <br>
+                  • Quantity discounts <br><br><br><br>
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md-6 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/s3.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Trucks Transport
+                </h5>
+                <p>
+                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                  The
+                  point of using
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/s4.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Train Transport
+                </h5>
+                <p>
+                  fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                  The
+                  point of using
+                </p>
+                <a href="">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+  <br><br><br>
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About <span>Us</span>
+              </h2>
+            </div>
+            <p>
+              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+              the middle of text. All
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='jpg/about.jpg') }}" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- track section -->
+
+  <section class="track_section layout_padding">
+    <div class="track_bg_box">
+      <img src="{{ url_for('static', filename='jpg/track-bg.jpg') }}" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="heading_container">
+            <h2>
+              Track Your Shipment
+            </h2>
+          </div>
+          <p>
+            Iste reprehenderit maiores facilis saepe cumque molestias. Labore iusto excepturi, laborum aliquid pariatur
+            veritatis autem, mollitia sint nesciunt hic error porro.
+            Deserunt officia unde repellat beatae ipsum sed. Aperiam tempora consectetur voluptas magnam maxime
+            asperiores quas similique repudiandae, veritatis reiciendis harum fuga atque.
+          </p>
+          <form action="">
+            <input type="text" placeholder="Enter Your Tracking Number" />
+            <button type="submit">
+              Track
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end track section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+
+      </div>
+      <div class="client_container">
+        <div class="carousel-wrap ">
+          <div class="owl-carousel">
+            <div class="item">
+              <div class="box">
+                <div class="detail-box">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  </p>
+                </div>
+                <div class="client_id">
+                  <div class="img-box">
+                    <img src="{{ url_for('static', filename='jpg/client-1.png') }}" alt="" class="img-1">
+                  </div>
+                  <div class="name">
+                    <h6>
+                      Adipiscing
+                    </h6>
+                    <p>
+                      Magna
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="detail-box">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  </p>
+                </div>
+                <div class="client_id">
+                  <div class="img-box">
+                    <img src="{{ url_for('static', filename='jpg/client-2.png') }} alt=" class="img-1">
+                  </div>
+                  <div class="name">
+                    <h6>
+                      Adipiscing
+                    </h6>
+                    <p>
+                      Magna
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="detail-box">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  </p>
+                </div>
+                <div class="client_id">
+                  <div class="img-box">
+                    <img src="{{ url_for('static', filename='jpg/client-1.png') }}" alt="" class="img-1">
+                  </div>
+                  <div class="name">
+                    <h6>
+                      Adipiscing
+                    </h6>
+                    <p>
+                      Magna
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="box">
+                <div class="detail-box">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  </p>
+                </div>
+                <div class="client_id">
+                  <div class="img-box">
+                    <img src="{{ url_for('static', filename='jpg/client-2.png') }}" alt="" class="img-1">
+                  </div>
+                  <div class="name">
+                    <h6>
+                      Adipiscing
+                    </h6>
+                    <p>
+                      Magna
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- contact section -->
+  <section class="contact_section">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-5 offset-md-1">
+          <h2>
+            BOOK AN ONLINE <span style="color:#0a97b0">MEETING</span>
+          </h2>
+          <div class="heading_container">
+
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-5 offset-md-1">
+          <div class="form_container contact-form">
+            <form action="{{ url_for('book') }}" method="post">
+              <div>
+                  <input type="text" id="name" name="name" placeholder="Your Name" />
+              </div>
+              <div>
+                  <input type="text" id='phone' name="phone" placeholder="Phone Number" />
+              </div>
+              <div>
+                  <input type="email" id="email" name="email" placeholder="Email" />
+              </div>
+              <div>
+                  <input type="text" id="message" name="message" class="message-box" placeholder="Please tell us about your project" />
+              </div>
+              <div class="date-time">
+                  <input type="date" id="date" name="date" placeholder="Date" />
+                  <input type="time" id="time" name="time" placeholder="Time" />
+              </div>
+              <div class="btn_box">
+                  <button type="submit">SEND</button>
+              </div>
+          </form>
+          
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6 px-0">
+          <div class="map_container">
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1825.6347132678636!2d90.4048088701352!3d23.77341829319197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7ab4053d2d7%3A0xc8c62e78ef0fea0f!2s3D%20Printing%20HUB!5e0!3m2!1sbn!2sbd!4v1701692519211!5m2!1sbn!2sbd"
+                width="750" height="420" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a
+                href="https://www.google.com/maps/place/3D+Printing+HUB/@23.7734183,90.4048089,18z/data=!4m6!3m5!1s0x3755c7ab4053d2d7:0xc8c62e78ef0fea0f!8m2!3d23.7732617!4d90.4044275!16s%2Fg%2F11qpv25zp7?entry=ttu">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +8801798553072
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  3dprintinghubbd@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_links">
+            <h4>
+              3D Printing
+            </h4>
+            <a class="active" href="">
+              3D PRINTING SERVICES
+            </a>
+            <a class="" href="">
+              DESIGN SERVICES
+            </a>
+            <a class="" href="service.html">
+              MANUFACTURING SERVICES
+            </a>
+            <a class="" href="contact.html">
+              TRAINING
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="active" href="index.html">
+                <img src="{{ url_for('static', filename='jpg/nav-bullet.png') }}" alt="">
+                Home
+              </a>
+              <a class="" href="about.html">
+                <img src="{{ url_for('static', filename='jpg/nav-bullet.png') }}" alt="">
+                About
+              </a>
+              <a class="" href="service.html">
+                <img src="{{ url_for('static', filename='jpg/nav-bullet.png') }}" alt="">
+                Services
+              </a>
+              <a class="" href="contact.html">
+                <img src="{{ url_for('static', filename='jpg/nav-bullet.png') }}" alt="">
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+          </h4>
+          <form action="{{ url_for('login') }}" method="get">
+            <input type="text" placeholder="Admin Panel" />
+            <button type="submit">
+                Restricted
+            </button>
+        </form>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center;">© Created by Sabik Hasan Adri</p>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+</body>
+
+</html>
